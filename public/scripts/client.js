@@ -68,4 +68,8 @@ $('document').ready(function() {
 
   renderTweets(data);
 
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+  })
+
 });
