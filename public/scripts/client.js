@@ -6,7 +6,11 @@
 
 $('document').ready(function() {
   
+  // Importing the timeago function to show the time passed on the tweet post
+  
   $("time.timeago").timeago();
+
+  // Transforming the tweet object into an HTML element
 
   const createTweetElement = function(tweet) {
     const postedTweet = `
@@ -34,6 +38,28 @@ $('document').ready(function() {
     return postedTweet;
   }
 
+  // Adding the tweets to the existing base HTML
+
+  const renderTweets = function(tweetsArray) {
+    for (let tweet of tweetsArray) {
+      const currentTweet = createTweetElement(tweet);
+      $('#tweets-container').prepend(currentTweet)
+    }
+  }
+
+  // Adding the tweet to the tweets database
+
+  $('form').on('submit', function(event) {
+    event.preventDefault();
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: $(this).serialize(),
+    })
+      // .then(renderTweets(tweetText))
+      .then(console.log('Added to the database'))
+  });
+
   const data = [
     {
       "user": {
@@ -59,17 +85,6 @@ $('document').ready(function() {
     }
   ]
 
-  const renderTweets = function(tweetsArray) {
-    for (let tweet of tweetsArray) {
-      const $currentTweet = createTweetElement(tweet);
-      $('#tweets-container').append($currentTweet)
-    }
-  }
-
   renderTweets(data);
-
-  $('form').on('submit', function(event) {
-    event.preventDefault();
-  })
 
 });
