@@ -15,11 +15,19 @@ html {
  */
 
 body {
-  color: #545149;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #f4f1ec;
+  font: "Source Sans Pro", sans-serif;
   font-size: 24px;
+  color: #545149;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+main {
+  width: 90%;
+}
