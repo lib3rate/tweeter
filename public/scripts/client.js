@@ -59,7 +59,7 @@ $('document').ready(function() {
       });
   }
 
-  // Adding the tweet to the tweets database
+  // Adding the tweet to the tweets database and displaying it as the most recent
 
   $('form').on('submit', function(event) {
     
@@ -69,7 +69,7 @@ $('document').ready(function() {
 
     if (tweetText.length > 140) {
       alert('The tweet exceeds the maximum length')
-    } else if (tweetText === '') {
+    } else if (!tweetText) {
       alert('Please enter the tweet')
     } else {
       $.ajax({
@@ -77,7 +77,8 @@ $('document').ready(function() {
         method: 'POST',
         data: $(this).serialize(),
       })
-        .then(console.log('Added to the database'))
+        .then($('#tweets-container').empty())
+        .then(loadTweets)
     }
     
   });
