@@ -47,23 +47,9 @@ $('document').ready(function() {
     }
   }
 
-  // Adding the tweet to the tweets database
-
-  $('form').on('submit', function(event) {
-    event.preventDefault();
-    $.ajax({
-      url: '/tweets',
-      method: 'POST',
-      data: $(this).serialize(),
-    })
-      // .then(renderTweets(tweetText))
-      .then(console.log('Added to the database'))
-  });
-
   // Loading the tweets feed when opening the page
 
   const loadTweets = function() {
-    console.log('Page loaded, performing ajax call...');
     $.ajax({
       url: '/tweets',
       method: 'GET'
@@ -72,6 +58,29 @@ $('document').ready(function() {
         renderTweets(response);
       });
   }
+
+  // Adding the tweet to the tweets database
+
+  $('form').on('submit', function(event) {
+    
+    event.preventDefault();
+
+    let tweetText = $('#tweet-text').val();
+
+    if (tweetText.length > 140) {
+      alert('The tweet exceeds the maximum length')
+    } else if (tweetText === '') {
+      alert('Please enter the tweet')
+    } else {
+      $.ajax({
+        url: '/tweets',
+        method: 'POST',
+        data: $(this).serialize(),
+      })
+        .then(console.log('Added to the database'))
+    }
+    
+  });
 
   loadTweets();
 
