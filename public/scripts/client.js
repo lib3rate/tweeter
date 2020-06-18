@@ -10,6 +10,14 @@ $('document').ready(function() {
   
   $("time.timeago").timeago();
 
+  // Escaping Cross-Site Scripting (XSS)
+
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   // Transforming the tweet object into an HTML element
 
   const createTweetElement = function(tweet) {
@@ -23,7 +31,7 @@ $('document').ready(function() {
           <text class="handle">${tweet.user.handle}</text>
         </header>
         <text class="posted-tweet-text">
-          ${tweet.content.text}
+          ${escape(tweet.content.text)}
         </text>
         <footer>
           <text>
@@ -66,7 +74,7 @@ $('document').ready(function() {
     event.preventDefault();
 
     let tweetText = $('#tweet-text').val();
-
+    
     if (tweetText.length > 140) {
       alert('The tweet exceeds the maximum length')
     } else if (!tweetText) {
