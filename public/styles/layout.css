@@ -36,7 +36,7 @@ main {
 @media only screen and (min-width: 768px) {
 
   body {
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .page-content {
@@ -48,8 +48,12 @@ main {
     align-items: flex-start;
   }
 
-  main {
-    width: 75%;
+}
+
+@media only screen and (min-width: 1024px) {
+
+  body {
+    font-size: 24px;
   }
 
 }

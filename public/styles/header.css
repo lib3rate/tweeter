@@ -22,19 +22,33 @@
 @media only screen and (min-width: 768px) {
 
   #page-header {
-    height: 14em;
-    width: 30%;
-    margin: 2em 6em 0 0;
+    height: 11em;
+    width: 40%;
+    margin: 2em 3em 0 0;
   }
 
   #page-header img {
     margin-top: 1em;
-    height: 8em;
+    height: 6em;
   }
 
   #page-header h2 {
     display: inline-block;
     margin: 0 0 1em 0;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  #page-header {
+    height: 13em;
+    width: 35%;
+    margin: 2em 6em 0 0;
+  }
+
+  #page-header img {
+    height: 8em;
   }
 
 }
