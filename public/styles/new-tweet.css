@@ -8,6 +8,10 @@ form {
   font-weight: 700;
 } */
 
+main section h2 {
+  margin-top: 1em;
+}
+
 #tweet-text {
   height: 1.5em;
   border-width: 0px 0px 3px 0px;
@@ -48,4 +52,8 @@ form {
 
 .negative {
   color: red;
+}
+
+@media only screen and (min-width: 768px) {
+
 }

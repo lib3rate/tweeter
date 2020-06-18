@@ -28,6 +28,40 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+ 
+/* .page-content {
+  width: 100%;
+} */
+  
 main {
   width: 90%;
+  margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+
+  /* nav {
+    background-color: #4056A1;
+    background-image: none;
+  } */
+
+  .page-content {
+    width: 90%;
+    margin: 5em 2em 0 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  main {
+    width: 75%;
+    /* margin: auto; */
+  }
+
+  /* #page-header {
+    height: 5em;
+    width: 25%;
+  } */
+
 }

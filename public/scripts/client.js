@@ -96,6 +96,9 @@ $('document').ready(function() {
     
   });
 
-  $(document).onLoad(loadTweets());
+  loadTweets()
+
+  // Should it be onLoad?
+  // $(document).onLoad(loadTweets());
 
 });

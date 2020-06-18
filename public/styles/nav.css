@@ -6,11 +6,22 @@ nav {
   height: 5em;
   width: 100%;
   padding: 1.5em;
-  background-color: #4056A1;
+  background-color: rgb(121, 0, 80);
+  /* background-color: #ffbdbd; */
+  background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
   font-family: "Source Sans Pro", sans-serif;
   color: #FFFFFF;
 }
 
 nav span {
   font-family: "Bungee", sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+
+  nav {
+    background-color: #4056A1;
+    background-image: none;
+  }
+
 }

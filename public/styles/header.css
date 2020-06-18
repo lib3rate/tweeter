@@ -4,16 +4,38 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 400px;
+  height: 20em;
   width: 100%;
-  background-color: #ffbdbd;
+  color: #FFFFFF;
+  background-color: rgb(121, 0, 80);
+  /* background-color: #ffbdbd; */
   background-image: url("https://www.transparenttextures.com/patterns/light-wool.png");
 }
 
-#page-header div img {
+#page-header img {
   margin-top: 10px;
 }
 
-#page-header div h2 {
+#page-header h2 {
   margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+
+  #page-header {
+    height: 14em;
+    width: 30%;
+    margin: 2em 6em 0 0;
+  }
+
+  #page-header img {
+    margin-top: 1em;
+    height: 8em;
+  }
+
+  #page-header h2 {
+    display: inline-block;
+    margin: 0 0 1em 0;
+  }
+
 }
