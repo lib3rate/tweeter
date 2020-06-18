@@ -37,7 +37,6 @@
 .posted-tweet-text {
   display: block;
   padding: 1em 0.5em;
-  /* border: 0px 0px 3px 0px solid #545149; */
   border-width: 0px 0px 3px 0px;
   border-style: solid;
   border-color: #545149;
@@ -51,5 +50,11 @@
   align-items: center;
   padding: 0 0.5em;
   margin: 0.5em 0 0 0;
-  font-size: 18px;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .posted-tweet footer {
+    font-size: 18px;
+  }
 }

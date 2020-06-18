@@ -20,7 +20,7 @@ body {
   align-items: center;
   background-color: #f4f1ec;
   font: "Source Sans Pro", sans-serif;
-  font-size: 24px;
+  font-size: 16px;
   color: #545149;
 }
 
@@ -28,11 +28,6 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- 
-/* .page-content {
-  width: 100%;
-} */
-  
 main {
   width: 90%;
   margin: auto;
@@ -40,10 +35,9 @@ main {
 
 @media only screen and (min-width: 768px) {
 
-  /* nav {
-    background-color: #4056A1;
-    background-image: none;
-  } */
+  body {
+    font-size: 24px;
+  }
 
   .page-content {
     width: 90%;
@@ -56,12 +50,6 @@ main {
 
   main {
     width: 75%;
-    /* margin: auto; */
   }
-
-  /* #page-header {
-    height: 5em;
-    width: 25%;
-  } */
 
 }

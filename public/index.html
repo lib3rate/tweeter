@@ -37,7 +37,7 @@
     <!-- Tweet character counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
-    <!-- Disallow zooming on mobile devices so as not to prevent using the mobile layout -->
+    <!-- Disable zooming on mobile devices so as not to prevent using the mobile layout -->
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
   </head>
 
@@ -52,13 +52,9 @@
 
     <div class="page-content">
       <header id="page-header">
-        <!-- <div> -->
-            <img src="/images/profile-hex.png"> 
-        <!-- </div> -->
+          <img src="/images/profile-hex.png"> 
         <br>
-        <!-- <div> -->
-            <h2>Your Name</h2>
-        <!-- </div> -->
+          <h2>Your Name</h2>
       </header>
   
       <!-- Page-specific (main) content here -->
@@ -67,7 +63,6 @@
           <div class="error"></div>
           <h2>Compose Tweet</h2>
           <form method="POST" action="/tweets/">
-            <!-- Do we need the label? <label for="tweet-text">What are you humming about?</label> -->
             <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
             <div>
               <button type="submit" id="tweet-button">Tweet</button>
