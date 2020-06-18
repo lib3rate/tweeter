@@ -76,21 +76,26 @@ $('document').ready(function() {
     let tweetText = $('#tweet-text').val();
     
     if (tweetText.length > 140) {
-      alert('The tweet exceeds the maximum length')
+      $('.error').html('The tweet exceeds the maximum length');
+      $('.error').slideDown('fast');
     } else if (!tweetText) {
-      alert('Please enter the tweet')
+      // $('.error').val('Please enter the tweet');
+      $('.error').html('Please enter the tweet');
+      $('.error').slideDown('fast');
     } else {
+      $('.error').slideUp('fast');
       $.ajax({
         url: '/tweets',
         method: 'POST',
         data: $(this).serialize(),
       })
         .then($('#tweets-container').empty())
+        // .then($('#tweet-text').empty())
         .then(loadTweets)
     }
     
   });
 
-  loadTweets();
+  $(document).onLoad(loadTweets());
 
 });
