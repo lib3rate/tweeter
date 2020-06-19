@@ -99,6 +99,7 @@ $('document').ready(function() {
       })
         .then($('#tweets-container').empty())
         .then($('#tweet-text').val(""))
+        .then($('output').val(140))
         .then(loadTweets)
     }
     
