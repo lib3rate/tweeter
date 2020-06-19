@@ -70,7 +70,8 @@ $('document').ready(function() {
   // Showing the new tweet form when clicking the new tweet button in the navigation bar
 
   $('#new-tweet-button').on('click', function () {
-    $('.new-tweet').slideDown('fast');
+    $('.new-tweet').slideToggle('fast');
+    $('#tweet-text').focus();
   });
 
   // Adding the tweet to the tweets database and displaying it as the most recent
