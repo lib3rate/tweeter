@@ -12,6 +12,10 @@
   display: inline;
 }
 
+.posted-tweet:hover .icons {
+  display: inline;
+}
+
 .posted-tweet header {
   display: flex;
   justify-content: space-between;
@@ -30,6 +34,11 @@
 }
 
 .handle {
+  display: none;
+  color: rgb(142, 131, 209);
+}
+
+.icons {
   display: none;
   color: rgb(142, 131, 209);
 }

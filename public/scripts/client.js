@@ -82,10 +82,11 @@ $('document').ready(function() {
     let tweetText = $('#tweet-text').val();
     
     if (tweetText.length > 140) {
+      $('.error').slideUp('fast');
       $('.error').html('The tweet exceeds the maximum length');
       $('.error').slideDown('fast');
     } else if (!tweetText) {
-      // $('.error').val('Please enter the tweet');
+      $('.error').slideUp('fast');
       $('.error').html('Please enter the tweet');
       $('.error').slideDown('fast');
     } else {
@@ -103,8 +104,5 @@ $('document').ready(function() {
   });
 
   loadTweets()
-
-  // Should it be onLoad?
-  // $(document).onLoad(loadTweets());
 
 });
