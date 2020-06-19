@@ -35,10 +35,10 @@ $('document').ready(function() {
         </text>
         <footer>
           <text>
-          ${$.timeago(tweet.created_at)}
+            ${$.timeago(tweet.created_at)}
           </text>
-          <div>
-            Icons
+          <div class="icons">
+            <i class="fas fa-flag"></i> <i class="fas fa-retweet"></i> <i class="fas fa-heart"></i>
           </div>
         </footer>
       </article>
@@ -67,6 +67,12 @@ $('document').ready(function() {
       });
   }
 
+  // Showing the new tweet form when clicking the new tweet button in the navigation bar
+
+  $('#new-tweet-button').on('click', function () {
+    $('.new-tweet').slideDown('fast');
+  });
+
   // Adding the tweet to the tweets database and displaying it as the most recent
 
   $('form').on('submit', function(event) {
@@ -90,7 +96,7 @@ $('document').ready(function() {
         data: $(this).serialize(),
       })
         .then($('#tweets-container').empty())
-        // .then($('#tweet-text').empty())
+        .then($('#tweet-text').val(""))
         .then(loadTweets)
     }
     
