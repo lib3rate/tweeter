@@ -1,7 +1,7 @@
 # Tweeter Project
 
 Tweeter is a simple, single-page Twitter-style web application.
-The app has functionality to create a new tweet, load already posted tweets and has responsive display on mobile devices, tablets and laptops/desktop PCs.
+The app has functionality to create a new tweet, load already posted tweets and has responsive display on mobile devices, tablets and laptops or desktop PCs.
 
 ## Screenshots
 
