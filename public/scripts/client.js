@@ -16,7 +16,7 @@ $('document').ready(function() {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   // Transforming the tweet object into an HTML element
 
@@ -42,18 +42,18 @@ $('document').ready(function() {
           </div>
         </footer>
       </article>
-    `
+    `;
     return postedTweet;
-  }
+  };
 
   // Adding the tweets to the existing base HTML
 
   const renderTweets = function(tweetsArray) {
     for (let tweet of tweetsArray) {
       const currentTweet = createTweetElement(tweet);
-      $('#tweets-container').prepend(currentTweet)
+      $('#tweets-container').prepend(currentTweet);
     }
-  }
+  };
 
   // Loading the tweets feed when opening the page
 
@@ -62,14 +62,14 @@ $('document').ready(function() {
       url: '/tweets',
       method: 'GET'
     })
-      .then(function (response) {
+      .then(function(response) {
         renderTweets(response);
       });
-  }
+  };
 
   // Showing the new tweet form when clicking the new tweet button in the navigation bar
 
-  $('#new-tweet-button').on('click', function () {
+  $('#new-tweet-button').on('click', function() {
     $('.new-tweet').slideToggle('fast');
     $('#tweet-text').focus();
   });
@@ -100,11 +100,11 @@ $('document').ready(function() {
         .then($('#tweets-container').empty())
         .then($('#tweet-text').val(""))
         .then($('output').val(140))
-        .then(loadTweets)
+        .then(loadTweets);
     }
     
   });
 
-  loadTweets()
+  loadTweets();
 
 });

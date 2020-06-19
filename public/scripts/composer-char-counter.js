@@ -16,6 +16,6 @@ $(document).ready(function() {
       $(characterCounter).removeClass('negative');
     }
     
-  })
+  });
 
 });
