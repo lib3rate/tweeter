@@ -3,6 +3,10 @@
 Tweeter is a simple, single-page Twitter-style web application.
 The app has functionality to create a new tweet, load already posted tweets and has responsive display on mobile devices, tablets and laptops or desktop PCs.
 
+Front-end: jQuery, HTML, CSS
+
+Back-end: Node, Express
+
 ## Screenshots
 
 !["The page on loading it with the list of posted tweets on the right"](https://github.com/lib3rate/tweeter/blob/master/docs/page-on-load.png?raw=true)
