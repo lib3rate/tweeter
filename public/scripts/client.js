@@ -10,9 +10,6 @@ $('document').ready(function() {
   
   $("time.timeago").timeago();
 
-  console.log(timeago('Wed Jul 01 2020 00:06:37 GMT+0000 (UTC)'));
-  console.log(timeago('Wed Jul 01 2020 01:09:56 GMT+0000 (UTC)'));
-  
   // Escaping Cross-Site Scripting (XSS)
 
   const escape =  function(str) {
